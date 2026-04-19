@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme{
+  --color-bg-primary: oklch(100% 0.00011 271.152);
+  --color-bg-alt: oklch(97.547% 0.00464 258.635);
+  --color-primary-hover: oklch(0.96 0 0);
+  --color-accent: oklch(59.264% 0.22358 258.431);
+  --color-accent-hover:  oklch(65.3% 0.214 259.815);
+  --color-accent-border: oklch(90.498% 0.04815 249.372);
+  --color-border: oklch(92.876% 0.01272 255.643);
+  --color-text: oklch(17.21% 0.03239 268.888);
+  --color-text-muted: oklab(44.744% -0.00516 -0.03394);
+}
+
+:root[data-theme="dark"]{
+  --color-bg-primary: oklch(17.21% 0.03239 268.888);
+  --color-bg-alt: oklch(20.419% 0.03957 267.546);
+  --color-primary-hover: oklch(0.24 0.05 268.46);
+  --color-border: oklch(27.95% 0.03688 260.049);
+  --color-text: oklch(100% 0.00011 271.152);
+  --color-text-muted: oklch(65.79% 0.02927 262.319);
+}
+:root[data-theme="dark"] #moon-icon{
+  display: hidden;
+}
+:root[data-theme="light"] #sun-icon{
+  display: hidden;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
+*{
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;;
+  transition-duration: 0.3s;
+}
+
+body{
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+
+nav{
+  transition-property: all;
+  transition-duration: 0.3s;
+}

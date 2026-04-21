@@ -2,7 +2,6 @@ export class NavbarMovement{
   nav: any;
   constructor(){
     this.nav = document.querySelector("nav");
-    console.log(this.nav)
     this.navAction()
   }
 

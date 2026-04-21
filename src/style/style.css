@@ -54,3 +54,80 @@ nav{
   transition-property: all;
   transition-duration: 0.3s;
 }
+
+.section-style{
+  @apply flex w-full items-center justify-center;
+}
+
+.section-container{
+  @apply max-h-fit max-w-6xl px-6 gap-10 justify-start py-25 lg:py-32;
+}
+
+.section-name{
+  @apply text-accent font-semibold text-sm uppercase;
+}
+
+.section-header{
+  @apply text-text text-4xl lg:text-5xl font-bold leading-tight;
+}
+
+.section-head-container{
+  @apply flex flex-col gap-2;
+}
+
+.section-description{
+  @apply text-text-muted text-lg;
+}
+/* ============================ */
+/* Skilles Section */
+/* ============================ */
+.skill-box{
+  @apply flex flex-col p-6 items-center justify-center gap-1 bg-bg-primary border border-border hover:border-accent hover:shadow-md hover:shadow-accent/20 rounded-2xl;
+}
+
+.skill-icon{
+  @apply group-hover:text-accent text-text-muted text-[38px];
+}
+
+.familiar-skilles-box{
+  @apply px-4 py-2 text-text-muted border border-border font-medium text-sm rounded-2xl;
+}
+/* ============================ */
+/* Projects Section */
+/* ============================ */
+
+.project-card{
+  @apply bg-bg-primary rounded-2xl border border-border overflow-hidden;
+}
+
+.project-card-info{
+  @apply flex flex-col p-5 gap-4;
+}
+
+.project-card__techs{
+  @apply flex gap-2 items-center;
+}
+
+.project-card__tech{
+  @apply bg-accent/10 rounded-2xl px-2 py-1 text-[12px] text-accent font-medium border border-border;
+}
+
+.project-name{
+  @apply font-semibold text-lg text-text;
+}
+
+.project-description{
+  @apply text-text-muted text-sm;
+}
+
+.project-contact{
+  @apply grid grid-cols-[1fr_auto] items-center gap-2 mt-2;
+}
+
+.preview{
+  @apply flex flex-2 items-center justify-center border border-border rounded-2xl p-2 gap-2 bg-accent text-white font-semibold hover:bg-accent-hover;
+}
+
+.github-btn{
+  @apply p-3 border border-border rounded-2xl text-text hover:bg-primary-hover hover:border-accent;
+}

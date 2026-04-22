@@ -97,7 +97,7 @@ nav{
 /* ============================ */
 
 .project-card{
-  @apply bg-bg-primary rounded-2xl border border-border overflow-hidden;
+  @apply bg-bg-primary rounded-2xl border border-border overflow-hidden  hover:shadow-[1px_20px_20px_0px_oklch(0.59_0.22_258.43/0.09)] transition-shadow duration-200;
 }
 
 .project-card-info{

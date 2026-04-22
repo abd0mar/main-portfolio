@@ -1,3 +1,7 @@
+// Import project images
+import dashboardDark from '../assets/images/project-dashboard-dark.png';
+import dashboardLight from '../assets/images/project-dashboard-light.png';
+
 export class Projects{
 
   projectsSection: HTMLElement | null;
@@ -16,7 +20,8 @@ export class Projects{
         name: 'Dashboard Website',
         description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        image: "./src/assets/images/project-dashboard-dark.png",
+        imageOne: dashboardDark,
+        imageTwo: dashboardLight,
         liveDemoLink: '',
         githubLink: '',
       },
@@ -24,7 +29,8 @@ export class Projects{
         name: 'Dashboard Website',
         description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        image: "./src/assets/images/project-dashboard-dark.png",
+        imageOne: dashboardDark,
+        imageTwo: dashboardLight,
         liveDemoLink: '',
         githubLink: '',
       },
@@ -32,7 +38,8 @@ export class Projects{
         name: 'Dashboard Website',
         description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        image: "./src/assets/images/project-dashboard-dark.png",
+        imageOne: dashboardDark,
+        imageTwo: dashboardLight,
         liveDemoLink: '',
         githubLink: '',
       },
@@ -40,7 +47,8 @@ export class Projects{
         name: 'Dashboard Website',
         description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        image: "./src/assets/images/project-dashboard-dark.png",
+        imageOne: dashboardDark,
+        imageTwo: dashboardLight,
         liveDemoLink: '',
         githubLink: '',
       }
@@ -58,10 +66,11 @@ export class Projects{
     if(this.projectsList.length > 3) this.isExtended = true;
     this.projectsList.forEach((project: Project) => {
       const projectBox:HTMLDivElement = document.createElement("div");
-      projectBox.className = 'project-card'
+      projectBox.className = 'project-card group';
       projectBox.innerHTML =`
-        <div>
-          <img src="${project.image}" alt="${project.name} screenshot">
+        <div class="relative">
+          <img class="relative group-hover:opacity-0 z-1" style="transition: 0.3s" src="${project.imageOne}" alt="${project.name} screenshot">
+          <img class="absolute top-0 w-full" src="${project.imageTwo}" alt="${project.name} screenshot">
         </div>
         <div class="project-card-info">
           <div class="project-card__techs">
@@ -90,7 +99,7 @@ export class Projects{
       const fadeElement:HTMLDivElement | null = document.createElement("div");
 
       fadeElement.id = "fade-element";
-      fadeElement.className = "absolute bottom-0 left-0 w-full h-60 bg-linear-to-t from-bg-primary via-bg-primary to-transparent";
+      fadeElement.className = "absolute bottom-0 left-0 w-full h-60 bg-linear-to-t from-bg-alt via-bg-alt to-transparent z-10";
       this.projectSection?.append(fadeElement);
       this.projectSectionContainer?.classList.replace("max-h-full", "max-h-235");
     }else{
@@ -120,7 +129,8 @@ interface Project {
   name: string;
   description: string;
   technologies: string[];
-  image: string;
+  imageOne: string;
+  imageTwo: string;
   liveDemoLink: string;
   githubLink: string;
 }

@@ -40,7 +40,7 @@
           </ul>
         </div>
         <div class="flex flex-1 gap-3 items-center justify-end">
-          <button id="theme-btn" class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent duration-200 cursor-pointer">
+          <button id="theme-btn" type="button" class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent duration-200 cursor-pointer">
               <svg id="moon-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
               <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
           </button>
@@ -51,268 +51,270 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <!-- Start Hero section -->
-    <section id="hero-section" class="relative section-style bg-bg-primary min-h-screen">
-      <div class="section-container text-start flex flex-col-reverse justify-center lg:flex-row py-20 px-0 pt-[30] items-center">
-        <div class="flex flex-col gap-5 items-center lg:items-start">
-          <div class="flex gap-2.5 items-center py-2 px-4 border border-border w-fit rounded-3xl text-[14px]">
+    <main>
+      <!-- Start Hero section -->
+      <section id="hero-section" class="relative section-style bg-bg-primary min-h-screen">
+        <div class="section-container text-center lg:text-start flex flex-col-reverse justify-center lg:flex-row py-20 px-0 pt-[30] items-center">
+          <div class="flex flex-col gap-5 items-center lg:items-start">
+            <div class="flex gap-2.5 items-center py-2 px-4 border border-border w-fit rounded-3xl text-[14px]">
+              <div>
+                <div class="absolute animate-ping w-2 h-2 bg-emerald-500 rounded-2xl "></div>
+                <div class="w-2 h-2 bg-emerald-500 rounded-2xl "></div>
+              </div>
+              <span class="text-text">Available for freelance work</span>
+            </div>
             <div>
-              <div class="absolute animate-ping w-2 h-2 bg-emerald-500 rounded-2xl "></div>
-              <div class="w-2 h-2 bg-emerald-500 rounded-2xl "></div>
+              <h1 class="text-text font-bold leading-tight">
+                <span class="block text-text-muted text-lg lg:text-[18px] font-medium mb-2">Hi, I'm</span>
+                <span class="text-[48px] lg:text-[72px] block">Abdulrhman Omar</span>
+              </h1>
+              <h2 class="text-accent font-semibold text-[24px] lg:text-[30px]">Frontend Web Developer</h2>
             </div>
-            <span class="text-text">Available for freelance work</span>
-          </div>
-          <div>
-            <h1 class="text-text font-bold leading-tight">
-              <span class="block text-text-muted text-lg lg:text-[18px] font-medium mb-2">Hi, I'm</span>
-              <span class="text-[48px] lg:text-[72px] block">Abdulrhman Omar</span>
-            </h1>
-            <h3 class="text-accent font-semibold text-[24px] lg:text-[30px]">Frontend Web Developer</h3>
-          </div>
-          <div>
-            <p class="text-sm lg:text-lg max-w-lg text-text-muted leading-relaxed">I craft modern, responsive websites that help small businesses in Egypt establish a strong online presence and connect with their customers</p>
-          </div>
-          <div class="flex gap-5">
-            <a class="flex items-center px-3 py-2.5 font-semibold text-[16px] bg-accent hover:bg-accent-hover shadow-lg shadow-accent/25 text-white duration-200 gap-2 rounded-2xl" href="#projects-section">
-              View My Work
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-            </a>
-            <a class="flex items-center px-3 py-2.5 cursor-pointer font-semibold text-[16px] bg-bg-primary text-text border border-border hover:bg-primary-hover duration-200  gap-2 rounded-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line"><path d="M12 17V3"/><path d="m6 11 6 6 6-6"/><path d="M19 21H5"/></svg>
-              Download CV
-            </a>
-          </div>
-        </div>
-        
-        <div class="w-fit p-3.5 border border-accent/10 rounded-3xl">
-          <div class="flex relative p-4 border border-accent/20 rounded-3xl justify-center items-center">
-            <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] top-10 left-10"></div>
-            <div class="rounded-3xl z-1 overflow-hidden w-72 md:w-80 lg:w-96">
-              <img class="w-full" src="src/assets/images/main.png" alt="">
+            <div>
+              <p class="text-sm lg:text-lg max-w-lg text-text-muted leading-relaxed">I craft modern, responsive websites that help small businesses in Egypt establish a strong online presence and connect with their customers</p>
             </div>
-            <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] bottom-10 right-10"></div>
-            <div class="absolute -bottom-0.5 -left-0.5 shadow-lg z-10 border border-border flex items-center gap-3 bg-bg-primary py-2 px-4 rounded-2xl">
-              <div class="p-1 bg-accent/10 rounded-xl text-[18px]"><span>🚀</span></div>
-              <div class="flex flex-col items-start">
-                <span class="text-text-muted text-[12px]">Open to</span>
-                <span class="font-semibold text-[14px] text-text">New Projects</span>
+            <div class="flex gap-5">
+              <a class="flex items-center px-3 py-2.5 font-bold text-[16px] bg-accent hover:bg-accent-hover shadow-lg shadow-accent/25 text-white duration-200 gap-2 rounded-2xl" href="#projects-section" aria-label="View my projects section">
+                View My Work
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+              </a>
+              <a class="flex items-center px-3 py-2.5 cursor-pointer font-semibold text-[16px] bg-bg-primary text-text border border-border hover:bg-primary-hover duration-200  gap-2 rounded-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line"><path d="M12 17V3"/><path d="m6 11 6 6 6-6"/><path d="M19 21H5"/></svg>
+                Download CV
+              </a>
+            </div>
+          </div>
+          
+          <div class="w-fit p-3.5 border border-accent/10 rounded-3xl">
+            <div class="flex relative p-4 border border-accent/20 rounded-3xl justify-center items-center">
+              <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] top-10 left-10"></div>
+              <div class="rounded-3xl z-1 overflow-hidden w-72 md:w-80 lg:w-96">
+                <img class="w-full" src="src/assets/images/main.png" alt="">
+              </div>
+              <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] bottom-10 right-10"></div>
+              <div class="absolute -bottom-0.5 -left-0.5 shadow-lg z-10 border border-border flex items-center gap-3 bg-bg-primary py-2 px-4 rounded-2xl">
+                <div class="p-1 bg-accent/10 rounded-xl text-[18px]"><span>🚀</span></div>
+                <div class="flex flex-col items-start">
+                  <span class="text-text-muted text-[12px]">Open to</span>
+                  <span class="font-semibold text-[14px] text-text">New Projects</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <a href="#about" class="absolute flex flex-col items-center bottom-0 lg:bottom-8 gap-1 animate-bounce text-text-muted text-[12px]">
-        <span>Scroll</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-      </a>
-    </section>
-    <!-- End Hero section -->
-    <!-- Start about section -->
-    <section id="about-section" class="section-style bg-bg-alt">
-      <div class="section-container grid lg:grid-cols-[1fr_1.2fr] items-center">
-        <div class="flex flex-col gap-8">
+        <a href="#about" class="absolute flex flex-col items-center bottom-0 lg:bottom-8 gap-1 animate-bounce text-text-muted text-[12px]">
+          <span>Scroll</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </a>
+      </section>
+      <!-- End Hero section -->
+      <!-- Start about section -->
+      <section id="about-section" class="section-style bg-bg-alt">
+        <div class="section-container grid lg:grid-cols-[1fr_1.2fr] items-center">
+          <div class="flex flex-col gap-8">
+            <div class="section-head-container">
+              <span class="section-name">ABOUT ME</span>
+              <h2 class="section-header">Passionate about creating digital experiences</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-5">
+              <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
+                <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="flex flex-col text-start">
+                  <span class="text-text font-semibold">Cairo, Egypt</span>
+                  <span class="text-text-muted text-sm">Location</span>
+                </div>
+              </div>
+              <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
+                <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase w-5 h-5 text-primary" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                </div>
+                <div class="flex flex-col text-start">
+                  <span class="text-text font-semibold">Freelancer</span>
+                  <span class="text-text-muted text-sm">Work Status</span>
+                </div>
+              </div>
+              <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
+                <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap w-5 h-5 text-primary" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
+                </div>
+                <div class="flex flex-col text-start">
+                  <span class="text-text font-semibold">Commerce</span>
+                  <span class="text-text-muted text-sm">Education</span>
+                </div>
+              </div>
+              <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
+                <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                </div>
+                <div class="flex flex-col text-start">
+                  <span class="text-text font-semibold">5+ Complete</span>
+                  <span class="text-text-muted text-sm">Projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="space-y-10">
+            <div class="flex flex-col gap-5">
+              <p class="text-text-muted text-[18px]">I'm a self-taught frontend developer based in Cairo, Egypt, with a deep passion for creating beautiful, functional websites that make a real difference for businesses.</p>
+              <p class="text-text-muted text-[16px]">Currently studying commerce at Cairo University, I've dedicated my free time to mastering web development. I believe in the power of clean code, intuitive design, and seamless user experiences. My goal is to help small businesses establish a strong online presence that converts visitors into customers.</p>
+              <p class="text-text-muted text-[16px]">When I'm not coding, you'll find me exploring new design trends, learning about the latest web technologies, or enjoying a good cup of coffee while brainstorming my next project.</p>
+            </div>
+            <div class="flex flex-wrap gap-5">
+              <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Clean Code</span>
+              <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Responsive Design</span>
+              <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Modern UI/UX</span>
+              <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Fast Delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End about section -->
+      <!-- Start skills section -->
+      <section id="skills-section" class="section-style bg-bg-primary">
+        <div class="section-container flex flex-col w-full justify-start">
           <div class="section-head-container">
-            <span class="section-name">ABOUT ME</span>
-            <h2 class="section-header">Passionate about creating digital experiences</h2>
+            <span class="section-name">My Expertise</span>
+            <h2 class="section-header">Skills & Technologies</h2>
+            <span class="section-description">The core technologies I use to build modern, responsive websites</span>
           </div>
-          <div class="grid grid-cols-2 gap-5">
-            <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
-              <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+  
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5">
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-html5"></i>
               </div>
-              <div class="flex flex-col text-start">
-                <span class="text-text font-semibold">Cairo, Egypt</span>
-                <span class="text-text-muted text-sm">Location</span>
-              </div>
+              <span class="font-bold text-text-muted">HTML5</span>
             </div>
-            <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
-              <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase w-5 h-5 text-primary" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-css3-alt"></i>
               </div>
-              <div class="flex flex-col text-start">
-                <span class="text-text font-semibold">Freelancer</span>
-                <span class="text-text-muted text-sm">Work Status</span>
-              </div>
+              <span class="font-bold text-text-muted">CSS3</span>
             </div>
-            <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
-              <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap w-5 h-5 text-primary" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-js"></i>
               </div>
-              <div class="flex flex-col text-start">
-                <span class="text-text font-semibold">Commerce</span>
-                <span class="text-text-muted text-sm">Education</span>
-              </div>
+              <span class="font-bold text-text-muted">JavaScript</span>
             </div>
-            <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
-              <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-typescript"></i>
               </div>
-              <div class="flex flex-col text-start">
-                <span class="text-text font-semibold">5+ Complete</span>
-                <span class="text-text-muted text-sm">Projects</span>
+              <span class="font-bold text-text-muted">TypeScript</span>
+            </div>
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-tailwind-css"></i>
               </div>
+              <span class="font-bold text-text-muted">Tailwind CSS</span>
+            </div>
+            <div class="group skill-box">
+              <div class="skill-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <span class="font-bold text-text-muted">Git & GitHub</span>
             </div>
           </div>
-        </div>
-
-        <div class="space-y-10">
+  
           <div class="flex flex-col gap-5">
-            <p class="text-text-muted text-[18px]">I'm a self-taught frontend developer based in Cairo, Egypt, with a deep passion for creating beautiful, functional websites that make a real difference for businesses.</p>
-            <p class="text-text-muted text-[16px]">Currently studying commerce at Cairo University, I've dedicated my free time to mastering web development. I believe in the power of clean code, intuitive design, and seamless user experiences. My goal is to help small businesses establish a strong online presence that converts visitors into customers.</p>
-            <p class="text-text-muted text-[16px]">When I'm not coding, you'll find me exploring new design trends, learning about the latest web technologies, or enjoying a good cup of coffee while brainstorming my next project.</p>
-          </div>
-          <div class="flex flex-wrap gap-5">
-            <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Clean Code</span>
-            <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Responsive Design</span>
-            <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Modern UI/UX</span>
-            <span class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Fast Delivery</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End about section -->
-    <!-- Start skills section -->
-    <section id="skills-section" class="section-style bg-bg-primary">
-      <div class="section-container flex flex-col w-full justify-start">
-        <div class="section-head-container">
-          <span class="section-name">My Expertise</span>
-          <h2 class="section-header">Skills & Technologies</h2>
-          <span class="section-description">The core technologies I use to build modern, responsive websites</span>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5">
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-html5"></i>
-            </div>
-            <span class="font-bold text-text-muted">HTML5</span>
-          </div>
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-css3-alt"></i>
-            </div>
-            <span class="font-bold text-text-muted">CSS3</span>
-          </div>
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-js"></i>
-            </div>
-            <span class="font-bold text-text-muted">JavaScript</span>
-          </div>
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-typescript"></i>
-            </div>
-            <span class="font-bold text-text-muted">TypeScript</span>
-          </div>
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-tailwind-css"></i>
-            </div>
-            <span class="font-bold text-text-muted">Tailwind CSS</span>
-          </div>
-          <div class="group skill-box">
-            <div class="skill-icon">
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <span class="font-bold text-text-muted">Git & GitHub</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-5">
-          <span class="font-semibold text-text">Also familiar with:</span>
-          <div class="flex flex-wrap gap-5">
-            <span class="familiar-skilles-box">Responsive Design</span>
-            <span class="familiar-skilles-box">Figma</span>
-            <span class="familiar-skilles-box">UI/UX Principles</span>
-            <span class="familiar-skilles-box">Business</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End skills section -->
-    <!-- Start projects section -->
-    <section id="projects-section" class="relative section-style bg-bg-alt">
-      <div id="project-section-container" class="max-h-full overflow-hidden max-w-6xl px-6 gap-10 justify-start py-25 lg:py-32 flex flex-col">
-        <div class="flex flex-row justify-between items-end">
-          <div>
-            <span class="section-name">Projects</span>
-            <h2 class="section-header">Featured Projects</h2>
-            <span class="section-description">A selection of my recent work showcasing my skills and passion for web development</span>
-          </div>
-          <div>
-            <a class="flex py-2 px-3 items-center gap-2 bg-bg-primary border border-border text-text rounded-2xl hover:bg-primary-hover hover:border-accent/30">
-              View All Projects
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4 ml-2" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
-            </a>
-          </div>
-        </div>
-        <div id="projects-container" class="grid lg:grid-cols-3 gap-5"></div>
-      </div>
-      <div id ="show-more-btn" class="absolute bottom-10 z-20 bg-accent flex gap-2 items-center text-white px-5 py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
-        <i class="fa-regular fa-eye"></i>Show More
-      </div>
-    </section>
-    <!-- End projects section -->
-    <!-- Start services section -->
-    <section id="services-section" class="section-style bg-bg-primary">
-      <div class="section-container flex flex-col items-center">
-        <div class="w-full">
-          <span class="section-name">Services</span>
-          <h2 class="section-header">What I Offer</h2>
-          <span class="section-description">I help businesses create a strong online presence with custom web solutions</span>
-        </div>
-        <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket-icon lucide-rocket text-accent"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></div>
-            </div>
-            <div class="flex flex-col gap-3">
-              <h3 class="text-xl font-bold text-text">Landing Pages</h3>
-              <span class="text-text-muted text-md">High-converting landing pages that capture leads and drive action. Perfect for product launches, campaigns, and lead generation.</span>
-            </div>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Fast Loading</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>SEO Optimized</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Mobile First</div>
-            </div>
-          </div>
-          <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe text-accent"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
-            </div>
-            <div class="flex flex-col gap-3">
-              <h3 class="text-xl font-bold text-text">Business Websites</h3>
-              <span class="text-text-muted text-md">Professional multi-page websites that establish credibility and help your business grow. Complete with all essential pages.</span>
-            </div>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Custom Design</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Contact Forms</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Analytics Ready</div>
-            </div>
-          </div>
-          <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard text-accent"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div>
-            </div>
-            <div class="flex flex-col gap-3">
-              <h3 class="text-xl font-bold text-text">Dashboard UI</h3>
-              <span class="text-text-muted text-md">Interactive dashboard interfaces with data visualization, responsive layouts, and clean user interfaces for efficient data management.</span>
-            </div>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Data Visualization</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Responsive Layout</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Clean UI</div>
+            <span class="font-semibold text-text">Also familiar with:</span>
+            <div class="flex flex-wrap gap-5">
+              <span class="familiar-skilles-box">Responsive Design</span>
+              <span class="familiar-skilles-box">Figma</span>
+              <span class="familiar-skilles-box">UI/UX Principles</span>
+              <span class="familiar-skilles-box">Business</span>
             </div>
           </div>
         </div>
-        <div class="mt-10 flex items-center justify-center gap-2">
-          <span class="text-text-muted text-md">Have a different project in mind?</span> 
-          <a href="#contact" class="group text-accent flex gap-1 items-center">Get in touch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent group-hover:animate-pulse"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </section>
+      <!-- End skills section -->
+      <!-- Start projects section -->
+      <section id="projects-section" class="relative section-style bg-bg-alt">
+        <div id="project-section-container" class="max-h-full overflow-hidden max-w-6xl px-6 gap-10 justify-start py-25 lg:py-32 flex flex-col">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <span class="section-name">Projects</span>
+              <h2 class="section-header">Featured Projects</h2>
+              <span class="section-description">A selection of my recent work showcasing my skills and passion for web development</span>
+            </div>
+            <div>
+              <a class="flex py-2 px-3 items-center gap-2 bg-bg-primary border border-border text-text rounded-2xl hover:bg-primary-hover hover:border-accent/30">
+                View All Projects
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4 ml-2" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+              </a>
+            </div>
+          </div>
+          <div id="projects-container" class="grid lg:grid-cols-3 gap-5"></div>
         </div>
-      </div>
-    </section>
-    <!-- End services section -->
+        <div id ="show-more-btn" class="absolute bottom-10 z-20 bg-accent flex gap-2 items-center text-white px-5 py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
+          <i class="fa-regular fa-eye"></i>Show More
+        </div>
+      </section>
+      <!-- End projects section -->
+      <!-- Start services section -->
+      <section id="services-section" class="section-style bg-bg-primary">
+        <div class="section-container flex flex-col items-center">
+          <div class="w-full">
+            <span class="section-name">Services</span>
+            <h2 class="section-header">What I Offer</h2>
+            <span class="section-description">I help businesses create a strong online presence with custom web solutions</span>
+          </div>
+          <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
+              <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket-icon lucide-rocket text-accent"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-bold text-text">Landing Pages</h3>
+                <span class="text-text-muted text-md">High-converting landing pages that capture leads and drive action. Perfect for product launches, campaigns, and lead generation.</span>
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Fast Loading</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>SEO Optimized</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Mobile First</div>
+              </div>
+            </div>
+            <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
+              <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe text-accent"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-bold text-text">Business Websites</h3>
+                <span class="text-text-muted text-md">Professional multi-page websites that establish credibility and help your business grow. Complete with all essential pages.</span>
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Custom Design</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Contact Forms</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Analytics Ready</div>
+              </div>
+            </div>
+            <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
+              <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard text-accent"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-xl font-bold text-text">Dashboard UI</h3>
+                <span class="text-text-muted text-md">Interactive dashboard interfaces with data visualization, responsive layouts, and clean user interfaces for efficient data management.</span>
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Data Visualization</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Responsive Layout</div>
+                <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>Clean UI</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-2">
+            <span class="text-text-muted text-md">Have a different project in mind?</span> 
+            <a href="#contact" class="group text-accent flex gap-1 items-center">Get in touch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent group-hover:animate-pulse"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </section>
+      <!-- End services section -->
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
   </html>

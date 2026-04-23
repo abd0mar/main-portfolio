@@ -41,6 +41,10 @@ html{
   transition-duration: 0.3s;
 }
 
+img.main-logo{
+  filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(5038%) hue-rotate(204deg) brightness(105%) contrast(105%);
+}
+
 body{
   margin: 0;
   font-family: "Inter", sans-serif;

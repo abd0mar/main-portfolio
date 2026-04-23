@@ -1,5 +1,5 @@
 export class NavbarMovement{
-  nav: any;
+  nav: HTMLElement | null;
   constructor(){
     this.nav = document.querySelector("nav");
     this.navAction()
@@ -9,11 +9,11 @@ export class NavbarMovement{
     window.addEventListener("scroll", () => {
         if(window.scrollY > 50){
           // this.nav.classList.add("") 
-          this.nav.classList.replace("border-transparent", "border-border")
-          this.nav.classList.replace("py-5", "py-2")
+          this.nav?.classList.replace("border-transparent", "border-border")
+          this.nav?.classList.replace("py-5", "py-2")
         }else{
-          this.nav.classList.replace("border-border", "border-transparent")
-          this.nav.classList.replace("py-2", "py-5")
+          this.nav?.classList.replace("border-border", "border-transparent")
+          this.nav?.classList.replace("py-2", "py-5")
         }
     })
   }
@@ -22,47 +22,39 @@ export class NavbarMovement{
 
 
 export class ThemeBtn{
-  btn: any;
-  moonIcn: any;
-  sunIcon: any;
+  btn: HTMLButtonElement | null;
+  moonIcon: SVGElement | null;
+  sunIcon: SVGElement | null;
   constructor(){
     this.btn = document.querySelector("#theme-btn");
-    this.moonIcn = document.querySelector("#moon-icon");
+    this.moonIcon = document.querySelector("#moon-icon");
     this.sunIcon = document.querySelector("#sun-icon");
-    // console.log(this)
     this.init()
   }
+
   init(){
-    // this.lsChk()
-    const currTheme = localStorage.getItem("theme")
-    // console.log(currTheme)
-    if(currTheme) this.updateIcons(currTheme);
+    const currTheme = localStorage.getItem("theme");
+    this.updateIcons(currTheme || "light");
     this.changeTheme()
   }
+
   changeTheme() {
-    this.btn.addEventListener("click", () => {
-      if(document.documentElement.dataset.theme === "light"){
-        document.documentElement.dataset.theme = "dark";
-        this.moonIcn.classList.add("hidden")
-        this.sunIcon.classList.remove("hidden")
-      }else{
-        document.documentElement.dataset.theme = "light";
-        this.moonIcn.classList.remove("hidden")
-        this.sunIcon.classList.add("hidden")
-      }
-      localStorage.setItem("theme", document.documentElement.dataset.theme)
+    this.btn?.addEventListener("click", () => {
+      const currentTheme = document.documentElement.dataset.theme
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      this.updateIcons(newTheme);
+      document.documentElement.dataset.theme = newTheme;
+      localStorage.setItem("theme", newTheme)
     })
   }
-  updateIcons(theme: string) {
-    const sunIcon = document.querySelector("#sun-icon");
-    const moonIcon = document.querySelector("#moon-icon");
 
+  updateIcons(theme: string) {
     if (theme === "dark") {
-      sunIcon?.classList.remove("hidden");
-      moonIcon?.classList.add("hidden");  
+      this.sunIcon?.classList.remove("hidden");
+      this.moonIcon?.classList.add("hidden");  
     } else {
-      sunIcon?.classList.add("hidden");
-      moonIcon?.classList.remove("hidden");
+      this.sunIcon?.classList.add("hidden");
+      this.moonIcon?.classList.remove("hidden");
     }
   }
 }

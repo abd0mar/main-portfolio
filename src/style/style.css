@@ -9,7 +9,7 @@
   --color-accent-border: oklch(90.498% 0.04815 249.372);
   --color-border: oklch(92.876% 0.01272 255.643);
   --color-text: oklch(17.21% 0.03239 268.888);
-  --color-text-muted: oklab(44.744% -0.00516 -0.03394);
+  --color-text-muted: oklch(55.1% 0.027 264.364);
 }
 
 :root[data-theme="dark"]{
@@ -37,8 +37,9 @@ html{
 }
 
 *{
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;;
-  transition-duration: 0.3s;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 img.main-logo{
@@ -56,7 +57,11 @@ a{
 
 nav{
   transition-property: all;
-  transition-duration: 0.3s;
+  /* transition-duration: 0.3s; */
+}
+
+nav li a{
+  @apply text-[15px] font-semibold text-text-muted py-2.5 px-3 rounded-2xl hover:text-accent-hover hover:bg-primary-hover;
 }
 
 .section-style{
@@ -64,7 +69,7 @@ nav{
 }
 
 .section-container{
-  @apply max-h-fit max-w-6xl px-6 gap-12 justify-start py-25 lg:py-32;
+  @apply max-h-fit max-w-6xl gap-12 justify-start py-25 lg:py-32;
 }
 
 .section-name{
@@ -83,11 +88,12 @@ nav{
   @apply text-text-muted text-lg;
 }
 
+
 /* ============================ */
-/* Skilles Section */
+/* Skills Section */
 /* ============================ */
 .skill-box{
-  @apply flex flex-col p-6 items-center justify-center gap-1 bg-bg-primary border border-border hover:border-accent hover:shadow-md hover:shadow-accent/20 rounded-2xl;
+  @apply flex flex-col p-6 items-center justify-center gap-1 bg-bg-primary border border-border hover:border-accent/30 hover:shadow-md hover:shadow-accent/20 rounded-2xl;
 }
 
 .skill-icon{
@@ -102,7 +108,7 @@ nav{
 /* Projects Section */
 /* ============================ */
 .project-card{
-  @apply bg-bg-primary rounded-2xl border border-border overflow-hidden  hover:shadow-[1px_20px_20px_0px_oklch(0.59_0.22_258.43/0.09)] transition-shadow duration-200;
+  @apply relative bg-bg-primary rounded-2xl border border-border overflow-hidden  hover:shadow-[0px_0px_20px_2px_oklch(0_0_0/0.071)] hover:border-accent/30;
 }
 
 .project-card-info{
@@ -134,5 +140,5 @@ nav{
 }
 
 .github-btn{
-  @apply p-3 border border-border rounded-2xl text-text hover:bg-primary-hover hover:border-accent;
+  @apply p-3 border border-border rounded-2xl text-text hover:bg-primary-hover hover:border-accent/30;
 }

@@ -5,7 +5,15 @@ import dashboardLight from '../assets/images/project-dashboard-light.png';
 export class Projects{
 
   projectsSection: HTMLElement | null;
-  projectsList: Project[];
+  projectsList: {
+    name: string;
+    description: string;
+    technologies: string[];
+    imageOne: string;
+    imageTwo: string;
+    liveDemoLink: string;
+    githubLink: string;
+  }[];
   isExtended: boolean;
   projectSection:HTMLDivElement | null;
   projectSectionContainer:HTMLDivElement | null;
@@ -19,7 +27,7 @@ export class Projects{
       {
         name: 'Dashboard Website',
         description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
+        technologies: ['HTML', 'CSS', 'Vanilla JS'],
         imageOne: dashboardDark,
         imageTwo: dashboardLight,
         liveDemoLink: 'https://abd0mar.github.io/Dashboard_Project/',
@@ -39,17 +47,17 @@ export class Projects{
     if(this.projectsList.length > 3){
       this.isExtended = true;
     }
-    this.projectsList.forEach((project: Project) => {
+    this.projectsList.forEach((project: { name: string; description: string; technologies: string[]; imageOne: string; imageTwo: string; liveDemoLink: string; githubLink: string }, index: number) => {
       const projectBox:HTMLDivElement = document.createElement("div");
       projectBox.className = 'project-card group';
       projectBox.innerHTML =`
-        <div class="relative">
-          <img class="relative group-hover:opacity-0 z-1" style="transition: 0.3s" src="${project.imageOne}" alt="${project.name} screenshot">
-          <img class="absolute top-0 w-full" src="${project.imageTwo}" alt="${project.name} screenshot">
+        <div class="absolute flex items-center justify-center rounded-lg top-3 left-3 px-3 py-1 border border-border z-10 bg-bg-primary/90 backdrop-blur-2xl"><span class="font-bold text-text text-md">${this.projectsList.length < 10 ? "0" + (index + 1) : (index + 1)}</span></div>
+        <div class="relative overflow-hidden">
+          <img class="relative group-hover:scale-105 delay-75" style="transition: 0.3s" src="${project.imageOne}" alt="${project.name} screenshot">
         </div>
         <div class="project-card-info">
           <div class="project-card__techs">
-          ${project.technologies.map(tech => `<span class="project-card__tech">${tech}</span>`).join('')}
+          ${project.technologies.map((tech: string) => `<span class="project-card__tech">${tech}</span>`).join('')}
           </div>
           <h3 class="project-name">${project.name}</h3>
           <span class="project-description">
@@ -102,14 +110,4 @@ export class Projects{
       showMoreBtn?.classList.add("hidden");
     }
   }
-}
-
-interface Project {
-  name: string;
-  description: string;
-  technologies: string[];
-  imageOne: string;
-  imageTwo: string;
-  liveDemoLink: string;
-  githubLink: string;
 }

@@ -1,6 +1,6 @@
 // Import project images
-import dashboardDark from '../assets/images/project-dashboard-dark.png';
-import dashboardLight from '../assets/images/project-dashboard-light.png';
+import dashboardDark from '../assets/images/project-dashboard-dark.webp';
+import dashboardLight from '../assets/images/project-dashboard-light.webp';
 
 export class Projects{
 
@@ -53,7 +53,7 @@ export class Projects{
       projectBox.innerHTML =`
         <div class="absolute flex items-center justify-center rounded-lg top-3 left-3 px-3 py-1 border border-border z-10 bg-bg-primary/90 backdrop-blur-2xl"><span class="font-bold text-text text-md">${this.projectsList.length < 10 ? "0" + (index + 1) : (index + 1)}</span></div>
         <div class="relative overflow-hidden">
-          <img class="relative group-hover:scale-105 delay-75" style="transition: 0.3s" src="${project.imageOne}" alt="${project.name} screenshot">
+          <img loading="lazy" class="relative group-hover:scale-105 delay-75" style="transition: 0.3s" src="${project.imageOne}" alt="${project.name} screenshot">
         </div>
         <div class="project-card-info">
           <div class="project-card__techs">

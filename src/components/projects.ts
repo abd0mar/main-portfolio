@@ -4,16 +4,9 @@ import dashboardLight from '../assets/images/project-dashboard-light.webp';
 
 export class Projects{
 
+
   projectsSection: HTMLElement | null;
-  projectsList: {
-    name: string;
-    description: string;
-    technologies: string[];
-    imageOne: string;
-    imageTwo: string;
-    liveDemoLink: string;
-    githubLink: string;
-  }[];
+  projectsList: Project[];
   isExtended: boolean;
   projectSection:HTMLDivElement | null;
   projectSectionContainer:HTMLDivElement | null;
@@ -110,4 +103,14 @@ export class Projects{
       showMoreBtn?.classList.add("hidden");
     }
   }
+}
+
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  imageOne: string;
+  imageTwo: string;
+  liveDemoLink: string;
+  githubLink: string;
 }

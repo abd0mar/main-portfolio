@@ -65,11 +65,11 @@ nav li a{
 }
 
 .section-style{
-  @apply flex w-full items-center justify-center px-6 py-25 lg:py-32;
+  @apply flex w-full items-center justify-center px-6 xl:px-0 py-25 lg:py-32;
 }
 
 .section-container{
-  @apply max-h-fit max-w-6xl gap-12 justify-start;
+  @apply max-h-fit max-w-6xl gap-12 justify-start mx-auto;
 }
 
 .section-name{

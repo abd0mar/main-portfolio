@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --color-bg-primary: oklch(100% 0.00011 271.152);
   --color-bg-alt: oklch(97.547% 0.00464 258.635);
   --color-primary-hover: oklch(0.96 0 0);
   --color-accent: oklch(59.264% 0.22358 258.431);
-  --color-accent-hover:  oklch(65.3% 0.214 259.815);
+  --color-accent-hover: oklch(65.3% 0.214 259.815);
   --color-accent-border: oklch(90.498% 0.04815 249.372);
   --color-border: oklch(92.876% 0.01272 255.643);
   --color-text: oklch(17.21% 0.03239 268.888);
   --color-text-muted: oklch(55.1% 0.027 264.364);
 }
 
-:root[data-theme="dark"]{
+:root[data-theme="dark"] {
   --color-bg-primary: oklch(17.21% 0.03239 268.888);
   --color-bg-alt: oklch(20.419% 0.03957 267.546);
   --color-primary-hover: oklch(0.24 0.05 268.46);
@@ -20,71 +20,76 @@
   --color-text: oklch(100% 0.00011 271.152);
   --color-text-muted: oklch(65.79% 0.02927 262.319);
 }
-:root[data-theme="dark"] #moon-icon{
-  display: hidden;
-}
-:root[data-theme="light"] #sun-icon{
+
+:root[data-theme="dark"] #moon-icon {
   display: hidden;
 }
 
-html{
+:root[data-theme="light"] #sun-icon {
+  display: hidden;
+}
+
+html {
   box-sizing: border-box;
   font-size: 100%;
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-*{
+* {
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 
-img.main-logo{
+img.main-logo {
   filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(5038%) hue-rotate(204deg) brightness(105%) contrast(105%);
 }
 
-body{
+body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-display: swap;
 }
 
-a{
+a {
   -webkit-tap-highlight-color: transparent;
 }
 
-nav{
+nav {
   transition-property: all;
   /* transition-duration: 0.3s; */
 }
 
-nav li a{
+nav li a {
   @apply text-[15px] font-semibold text-text-muted py-2.5 px-3 rounded-2xl hover:text-accent-hover hover:bg-primary-hover;
 }
 
-.section-style{
+.section-style {
   @apply flex w-full items-center justify-center px-6 xl:px-0 py-25 lg:py-32;
 }
 
-.section-container{
-  @apply max-h-fit max-w-6xl gap-12 justify-start mx-auto;
+.section-container {
+  @apply max-w-6xl gap-12 justify-start mx-auto;
 }
 
-.section-name{
+.section-name {
   @apply text-accent font-semibold text-sm uppercase;
 }
 
-.section-header{
+.section-header {
   @apply text-text text-4xl lg:text-5xl font-bold leading-tight;
 }
 
-.section-head-container{
+.section-head-container {
   @apply flex flex-col gap-2;
 }
 
-.section-description{
+.section-description {
   @apply text-text-muted text-lg;
 }
 
@@ -92,53 +97,53 @@ nav li a{
 /* ============================ */
 /* Skills Section */
 /* ============================ */
-.skill-box{
+.skill-box {
   @apply flex flex-col p-6 items-center justify-center gap-1 bg-bg-primary border border-border hover:border-accent/30 hover:shadow-md hover:shadow-accent/20 rounded-2xl;
 }
 
-.skill-icon{
-  @apply group-hover:text-accent text-text-muted text-[38px];
+.skill-icon {
+  @apply group-hover:text-accent text-text-muted;
 }
 
-.familiar-skilles-box{
+.familiar-skilles-box {
   @apply px-4 py-2 text-text-muted border border-border font-medium text-sm rounded-2xl;
 }
 
 /* ============================ */
 /* Projects Section */
 /* ============================ */
-.project-card{
-  @apply relative bg-bg-primary rounded-2xl border border-border overflow-hidden  hover:shadow-[0px_0px_20px_2px_oklch(0_0_0/0.071)] hover:border-accent/30;
+.project-card {
+  @apply relative bg-bg-primary rounded-2xl border border-border overflow-hidden hover:shadow-[0px_0px_20px_2px_oklch(0_0_0/0.071)] hover:border-accent/30;
 }
 
-.project-card-info{
+.project-card-info {
   @apply flex flex-col p-5 gap-4;
 }
 
-.project-card__techs{
+.project-card__techs {
   @apply flex gap-2 items-center;
 }
 
-.project-card__tech{
+.project-card__tech {
   @apply bg-accent/10 rounded-2xl px-2 py-1 text-[12px] text-accent font-medium border border-border;
 }
 
-.project-name{
+.project-name {
   @apply font-semibold text-lg text-text;
 }
 
-.project-description{
+.project-description {
   @apply text-text-muted text-sm;
 }
 
-.project-contact{
+.project-contact {
   @apply grid grid-cols-[1fr_auto] items-center gap-2 mt-2;
 }
 
-.preview{
+.preview {
   @apply flex flex-2 items-center justify-center border border-border rounded-2xl p-2 gap-2 bg-accent text-white font-semibold hover:bg-accent-hover;
 }
 
-.github-btn{
+.github-btn {
   @apply p-3 border border-border rounded-2xl text-text hover:bg-primary-hover hover:border-accent/30;
 }

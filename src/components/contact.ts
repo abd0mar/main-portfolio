@@ -10,19 +10,19 @@ export class InputValidation{
       input: document.getElementById("name-input") as HTMLInputElement,
       message: document.getElementById("invalid-name") as HTMLSpanElement,
       regex: /^[a-zA-Z]+( [a-zA-Z]+)*$/,
-      key: "name",
+      key: "name" as keyof typeof this.isValid,
     },
     {
       input: document.getElementById("email-input") as HTMLInputElement,
       message: document.getElementById("invalid-email") as HTMLSpanElement,
       regex: /^\w+(\.[\w]+)*@\w+(\.[\w]+)*\.\w{2,}$/,
-      key: "email",
+      key: "email" as keyof typeof this.isValid,
     },
     {
       input: document.getElementById("message-input") as HTMLTextAreaElement,
       message: document.getElementById("invalid-message") as HTMLSpanElement,
-      regex: /^\w+$/,
-      key: "message",
+      regex: /^[\w\s.,!?]+$/,
+      key: "message" as keyof typeof this.isValid,
     },
   ]
 
@@ -48,7 +48,7 @@ export class InputValidation{
     })
   }
 
-  private performValidation(input:HTMLInputElement | HTMLTextAreaElement, regex:RegExp, key: keyof typeof this.isValid, message:HTMLSpanElement): void {
+  private performValidation(input:HTMLInputElement | HTMLTextAreaElement, regex:RegExp, key:keyof typeof this.isValid, message:HTMLSpanElement): void {
     let validCheck = regex.test(input.value);
     if(!validCheck){
       this.isValid[key] = false;

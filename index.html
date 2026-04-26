@@ -26,89 +26,87 @@
 
 <body class="bg-bg-primary transition-colors ">
   <!-- Start Navbar -->
-  <nav class="fixed z-50 w-full top-0 flex flex-col">
-    <div id="nav-container"
-      class="relative max-w-6xl flex justify-between border-b border-transparent z-1 items-center w-full top-0 mx-auto px-4 py-5 bg-bg-primary/90 backdrop-blur-2xl">
-      <a href="#hero-section" class="flex flex-1 gap-3 items-center">
-        <div
-          class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover  cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-code-xml-icon lucide-code-xml">
-            <path d="m18 16 4-4-4-4" />
-            <path d="m6 8-4 4 4 4" />
-            <path d="m14.5 4-5 16" />
-          </svg>
+  <nav class="fixed z-50 w-full top-0 flex py-5 border-b border-transparent bg-bg-primary">
+    <!-- <div class="absolute w-full h-full top-0 bg-bg-primary/95 backdrop-blur-lg"></div> -->
+    <div class="relative w-full">
+      <div id="nav-container"
+        class="relative max-w-6xl flex justify-between z-1 items-center top-0 mx-auto px-10 xl:px-0">
+        <a href="#hero-section" class="flex flex-1 gap-3 items-center">
+          <div
+            class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover  cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-code-xml-icon lucide-code-xml">
+              <path d="m18 16 4-4-4-4" />
+              <path d="m6 8-4 4 4 4" />
+              <path d="m14.5 4-5 16" />
+            </svg>
+          </div>
+          <span class="font-bold text-text">Abdulrhman</span>
+        </a>
+        <div class="hidden flex-1 justify-center lg:flex">
+          <ul class="flex gap-3">
+            <li><a href="#about-section" class="nav-links">About</a></li>
+            <li><a href="#skills-section" class="nav-links">Skills</a></li>
+            <li><a href="#projects-section" class="nav-links">Projects</a></li>
+            <li><a href="#services-section" class="nav-links">Services</a></li>
+            <li><a href="#contact-section" class="nav-links">Contact</a></li>
+          </ul>
         </div>
-        <span class="font-bold text-text">Abdulrhman</span>
-      </a>
-      <div class="hidden flex-1 justify-center lg:flex">
-        <ul class="flex gap-3">
-          <li><a href="#about-section">About</a></li>
-          <li><a href="#skills-section">Skills</a></li>
-          <li><a href="#projects-section">Projects</a></li>
-          <li><a href="#services-section">Services</a></li>
-          <li><a href="#contact-section">Contact</a></li>
-        </ul>
-      </div>
-      <div class="flex flex-1 gap-3 items-center justify-end">
-        <button id="theme-btn" type="button"
-          class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer">
-          <svg id="moon-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon">
-            <path
-              d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-          </svg>
-          <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2" />
-            <path d="M12 20v2" />
-            <path d="m4.93 4.93 1.41 1.41" />
-            <path d="m17.66 17.66 1.41 1.41" />
-            <path d="M2 12h2" />
-            <path d="M20 12h2" />
-            <path d="m6.34 17.66-1.41 1.41" />
-            <path d="m19.07 4.93-1.41 1.41" />
-          </svg>
-        </button>
-        <button type="button"
-          class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer lg:hidden"
-          id="nav-toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-menu-icon lucide-menu">
-            <path d="M4 5h16" />
-            <path d="M4 12h16" />
-            <path d="M4 19h16" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-x-icon lucide-x hidden">
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
-        <div>
+        <div class="flex flex-1 gap-3 items-center justify-end">
+          <button id="theme-btn" type="button"
+            class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer">
+            <svg id="moon-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon">
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+            </svg>
+            <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </button>
+          <button type="button"
+            class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer lg:hidden"
+            id="nav-toggle">
+            <svg id="open-menu" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu">
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+            <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x hidden">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
           <a href="#contact-section"
             class="hidden bg-accent text-white px-5 py-2.5 rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover cursor-pointer lg:block"><span>
               Hire Me</span></a>
         </div>
       </div>
-    </div>
-    <div
-      class="relative flex flex-col justify-center invisible opacity-0 -top-25 border-b border-border z-0 left-0 w-full bg-bg-primary/90 backdrop-blur-2xl p-5 gap-5"
-      id="nav-menu">
-      <ul class="flex flex-col gap-1">
-        <li><a class="flex w-full" href="#about-section">About</a></li>
-        <li><a class="flex w-full" href="#skills-section">Skills</a></li>
-        <li><a class="flex w-full" href="#projects-section">Projects</a></li>
-        <li><a class="flex w-full" href="#services-section">Services</a></li>
-        <li><a class="flex w-full" href="#contact-section">Contact</a></li>
-      </ul>
-      <div>
+      <div
+        class="absolute flex flex-col lg:hidden justify-center opacity-0 max-h-0 top-12.25 left-0 w-full p-5 gap-1 px-10 bg-bg-primary border-b border-border"
+        id="nav-menu">
+        <!-- <div class="absolute w-full h-full top-0 z-0 bg-bg-primary/95 backdrop-blur-lg"></div> -->
+        <a class="flex w-full nav-links" href="#about-section">About</a>
+        <a class="flex w-full nav-links" href="#skills-section">Skills</a>
+        <a class="flex w-full nav-links" href="#projects-section">Projects</a>
+        <a class="flex w-full nav-links" href="#services-section">Services</a>
+        <a class="flex w-full nav-links" href="#contact-section">Contact</a>
         <a href="#contact-section"
           class="block bg-accent text-white px-5 py-2.5 text-center rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover cursor-pointer lg:hidden"><span>
             Hire Me</span></a>
@@ -388,14 +386,14 @@
     <!-- Start projects section -->
     <section id="projects-section" class="relative section-style bg-bg-alt">
       <div id="project-section-container" class="section-container overflow-hidden flex flex-col">
-        <div class="flex flex-row justify-between items-end">
+        <div class="flex justify-between items-end ">
           <div>
             <span class="section-name">Projects</span>
             <h2 class="section-header">Featured Projects</h2>
             <span class="section-description">A selection of my recent work showcasing my skills and passion for web
               development</span>
           </div>
-          <div>
+          <div class="hidden lg:block">
             <a href="https://github.com/abd0mar?tab=repositories" target="_blank"
               class="flex py-2 px-3 items-center gap-2 bg-bg-primary border border-border text-text rounded-2xl hover:bg-primary-hover hover:border-accent/30">
               View All Projects
@@ -408,10 +406,10 @@
             </a>
           </div>
         </div>
-        <div id="projects-container" class="grid lg:grid-cols-3 gap-5"></div>
+        <div id="projects-container" class="grid lg:grid-cols-3 gap-5 mb-12.5 lg:mb-0"></div>
       </div>
       <div id="show-more-btn"
-        class="absolute bottom-15 z-20 bg-accent flex gap-2 items-center text-white px-5 py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
+        class="absolute bottom-15 z-20 bg-accent flex gap-2 items-center text-white px-5 mx-auto py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
           <path
@@ -608,8 +606,8 @@
             <div class="flex flex-col gap-5">
               <span class="font-semibold text-lg text-text">Get in touch</span>
               <div class="flex flex-col">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdulrhmanomar613@gmail.com&su=طلب خدمة&body=أهلاً عبد الرحمن"
-                  target="_blank" class="group flex flex-row items-center gap-3 w-fit">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdulrhmanomar613@gmail.com&su" target="_blank"
+                  class="group flex flex-row items-center gap-3 w-fit">
                   <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -659,7 +657,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-arrow-up-right w-5 h-5 text-foreground-muted group-hover:text-foreground transition-colors ml-auto"
+                      class="lucide lucide-arrow-up-right w-5 h-5 text-text-muted group-hover:text-accent transition-colors ml-auto"
                       aria-hidden="true">
                       <path d="M7 7h10v10"></path>
                       <path d="M7 17 17 7"></path>
@@ -684,7 +682,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-arrow-up-right w-5 h-5 text-foreground-muted group-hover:text-foreground transition-colors ml-auto"
+                      class="lucide lucide-arrow-up-right w-5 h-5 text-text-muted group-hover:text-accent transition-colors ml-auto"
                       aria-hidden="true">
                       <path d="M7 7h10v10"></path>
                       <path d="M7 17 17 7"></path>
@@ -709,7 +707,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-arrow-up-right w-5 h-5 text-foreground-muted group-hover:text-foreground transition-colors ml-auto"
+                      class="lucide lucide-arrow-up-right w-5 h-5 text-text-muted group-hover:text-accent transition-colors ml-auto"
                       aria-hidden="true">
                       <path d="M7 7h10v10"></path>
                       <path d="M7 17 17 7"></path>

@@ -1,11 +1,15 @@
 export class NavbarMovement {
-  navContainer: HTMLDivElement | null;
+  nav: HTMLElement | null;
   menu: HTMLDivElement | null
-  icon: HTMLButtonElement | null;
+  toggleBtn: HTMLButtonElement | null;
+  openIcon: SVGElement | null;
+  closeIcon: SVGElement | null;
   constructor() {
-    this.navContainer = document.querySelector("#nav-container") as HTMLDivElement;
-    this.menu = document.getElementById("nav-menu") as HTMLDivElement;
-    this.icon = document.getElementById("nav-toggle") as HTMLButtonElement;
+    this.nav = document.querySelector("nav") as HTMLElement;
+    this.menu = document.querySelector("#nav-menu") as HTMLDivElement;
+    this.toggleBtn = document.querySelector("#nav-toggle") as HTMLButtonElement;
+    this.openIcon = document.querySelector("#open-menu") as SVGElement;
+    this.closeIcon = document.querySelector("#close-menu") as SVGElement;
     this.init()
   }
 
@@ -17,31 +21,28 @@ export class NavbarMovement {
   navAction() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        this.navContainer?.classList.replace("border-transparent", "border-border")
-        this.navContainer?.classList.replace("py-5", "py-2")
+        this.nav?.classList.replace("border-transparent", "border-border")
+        this.nav?.classList.replace("py-5", "py-3")
       } else {
-        if (this.menu?.classList.contains("invisible")) {
-          this.navContainer?.classList.replace("border-border", "border-transparent")
-          console.log("yes")
-        }
-        this.navContainer?.classList.replace("py-2", "py-5")
+        this.nav?.classList.replace("border-border", "border-transparent")
+        this.nav?.classList.replace("py-3", "py-5")
       }
     })
   }
 
   toggleMenu() {
-    this.icon?.addEventListener("click", () => {
+    this.toggleBtn?.addEventListener("click", () => {
       console.log("fine")
-      if (this.menu?.classList.contains("invisible")) {
-        this.menu?.classList.replace("invisible", "visible")
+      if (this.menu?.classList.contains("max-h-0")) {
         this.menu?.classList.replace("opacity-0", "opacity-100")
-        this.menu?.classList.replace("-top-25", "top-0")
-        this.navContainer?.classList.replace("border-transparent", "border-border")
+        this.menu?.classList.replace("max-h-0", "max-h-300")
+        this.openIcon?.classList.add("hidden")
+        this.closeIcon?.classList.remove("hidden")
       } else {
-        this.menu?.classList.replace("visible", "invisible")
         this.menu?.classList.replace("opacity-100", "opacity-0")
-        this.menu?.classList.replace("top-0", "-top-25")
-        this.navContainer?.classList.replace("border-border", "border-transparent")
+        this.menu?.classList.replace("max-h-300", "max-h-0")
+        this.closeIcon?.classList.add("hidden")
+        this.openIcon?.classList.remove("hidden")
       }
     })
   }
@@ -85,32 +86,3 @@ export class ThemeBtn {
     }
   }
 }
-
-// export class NavMenu {
-//   icon: HTMLButtonElement | null;
-//   menu: HTMLDivElement | null;
-//   navContainer: HTMLDivElement | null
-//   constructor() {
-//     this.icon = document.getElementById("nav-toggle") as HTMLButtonElement;
-//     this.menu = document.getElementById("nav-menu") as HTMLDivElement;
-//     this.navContainer = document.querySelector("#nav-container") as HTMLDivElement;
-//     this.toggleMenu()
-//   }
-
-//   toggleMenu() {
-//     this.icon?.addEventListener("click", () => {
-//       console.log("fine")
-//       if (this.menu?.classList.contains("invisible")) {
-//         this.menu?.classList.replace("invisible", "visible")
-//         this.menu?.classList.replace("opacity-0", "opacity-100")
-//         this.menu?.classList.replace("-top-25", "top-0")
-//         this.navContainer?.classList.replace("border-transparent", "border-border")
-//       } else {
-//         this.menu?.classList.replace("visible", "invisible")
-//         this.menu?.classList.replace("opacity-100", "opacity-0")
-//         this.menu?.classList.replace("top-0", "-top-25")
-//         this.navContainer?.classList.replace("border-border", "border-transparent")
-//       }
-//     })
-//   }
-// }

@@ -72,12 +72,12 @@ nav {
   transition-property: all;
 }
 
-nav li a {
+.nav-links {
   @apply text-[15px] font-semibold text-text-muted py-2.5 px-3 rounded-2xl hover:text-accent-hover hover:bg-primary-hover;
 }
 
 .section-style {
-  @apply flex w-full items-center justify-center px-6 xl:px-0 py-25 lg:py-32;
+  @apply flex w-full items-center justify-center px-10 xl:px-0 py-25 lg:py-32;
 }
 
 .section-container {

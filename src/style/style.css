@@ -41,7 +41,7 @@ html {
 }
 
 * {
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
@@ -62,7 +62,14 @@ a {
 
 nav {
   transition-property: all;
-  /* transition-duration: 0.3s; */
+}
+
+#nav-container {
+  transition-property: all;
+}
+
+#nav-menu {
+  transition-property: all;
 }
 
 nav li a {

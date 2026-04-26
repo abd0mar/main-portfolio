@@ -24,13 +24,14 @@
 
 </head>
 
-<body class="bg-bg-primary transition-colors duration-200">
+<body class="bg-bg-primary transition-colors ">
   <!-- Start Navbar -->
-  <nav class="py-5 fixed border-transparent border z-50 w-full top-0 bg-bg-primary/90 backdrop-blur-2xl">
-    <div class="max-w-6xl flex justify-between items-center mx-auto px-4">
+  <nav class="fixed z-50 w-full top-0 flex flex-col">
+    <div id="nav-container"
+      class="relative max-w-6xl flex justify-between border-b border-transparent z-1 items-center w-full top-0 mx-auto px-4 py-5 bg-bg-primary/90 backdrop-blur-2xl">
       <a href="#hero-section" class="flex flex-1 gap-3 items-center">
         <div
-          class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover duration-200 cursor-pointer">
+          class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover  cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-code-xml-icon lucide-code-xml">
@@ -41,7 +42,7 @@
         </div>
         <span class="font-bold text-text">Abdulrhman</span>
       </a>
-      <div class="hidden flex-1 justify-center md:flex">
+      <div class="hidden flex-1 justify-center lg:flex">
         <ul class="flex gap-3">
           <li><a href="#about-section">About</a></li>
           <li><a href="#skills-section">Skills</a></li>
@@ -52,7 +53,7 @@
       </div>
       <div class="flex flex-1 gap-3 items-center justify-end">
         <button id="theme-btn" type="button"
-          class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent duration-200 cursor-pointer">
+          class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer">
           <svg id="moon-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon">
@@ -73,11 +74,44 @@
             <path d="m19.07 4.93-1.41 1.41" />
           </svg>
         </button>
+        <button type="button"
+          class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer lg:hidden"
+          id="nav-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x hidden">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
         <div>
           <a href="#contact-section"
-            class="hidden bg-accent text-white px-5 py-2.5 rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover duration-200 cursor-pointer md:block"><span>Hire
-              Me</span></a>
+            class="hidden bg-accent text-white px-5 py-2.5 rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover cursor-pointer lg:block"><span>
+              Hire Me</span></a>
         </div>
+      </div>
+    </div>
+    <div
+      class="relative flex flex-col justify-center invisible opacity-0 -top-25 border-b border-border z-0 left-0 w-full bg-bg-primary/90 backdrop-blur-2xl p-5 gap-5"
+      id="nav-menu">
+      <ul class="flex flex-col gap-1">
+        <li><a class="flex w-full" href="#about-section">About</a></li>
+        <li><a class="flex w-full" href="#skills-section">Skills</a></li>
+        <li><a class="flex w-full" href="#projects-section">Projects</a></li>
+        <li><a class="flex w-full" href="#services-section">Services</a></li>
+        <li><a class="flex w-full" href="#contact-section">Contact</a></li>
+      </ul>
+      <div>
+        <a href="#contact-section"
+          class="block bg-accent text-white px-5 py-2.5 text-center rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover cursor-pointer lg:hidden"><span>
+            Hire Me</span></a>
       </div>
     </div>
   </nav>
@@ -108,7 +142,7 @@
             </p>
           </div>
           <div class="flex gap-5">
-            <a class="flex items-center px-3 py-2.5 font-bold text-[16px] bg-accent hover:bg-accent-hover shadow-lg shadow-accent/25 text-white duration-200 gap-2 rounded-2xl"
+            <a class="flex items-center px-3 py-2.5 font-bold text-[16px] bg-accent hover:bg-accent-hover shadow-lg shadow-accent/25 text-white  gap-2 rounded-2xl"
               href="#projects-section" aria-label="View my projects section">
               View My Work
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -119,7 +153,7 @@
               </svg>
             </a>
             <a
-              class="flex items-center px-3 py-2.5 cursor-pointer font-semibold text-[16px] bg-bg-primary text-text border border-border hover:bg-primary-hover duration-200  gap-2 rounded-2xl">
+              class="flex items-center px-3 py-2.5 cursor-pointer font-semibold text-[16px] bg-bg-primary text-text border border-border hover:bg-primary-hover   gap-2 rounded-2xl">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line">
@@ -362,7 +396,7 @@
               development</span>
           </div>
           <div>
-            <a
+            <a href="https://github.com/abd0mar?tab=repositories" target="_blank"
               class="flex py-2 px-3 items-center gap-2 bg-bg-primary border border-border text-text rounded-2xl hover:bg-primary-hover hover:border-accent/30">
               View All Projects
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -398,8 +432,7 @@
         </div>
         <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div
-              class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
               <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-rocket-icon lucide-rocket text-accent">
@@ -439,8 +472,7 @@
             </div>
           </div>
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div
-              class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
               <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-globe-icon lucide-globe text-accent">
@@ -479,8 +511,7 @@
             </div>
           </div>
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
-            <div
-              class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-200">
+            <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
               <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard text-accent">
@@ -548,27 +579,27 @@
             class="flex flex-col p-10 border border-border bg-bg-primary rounded-2xl">
             <div class="grid grid-cols-2 gap-7">
               <div class="flex flex-col gap-1">
-                <label for="name-input" class="font-medium text-text w-fit">Full Name</label>
+                <label for="name-input" class="font-medium text-sm text-text w-fit">Full Name</label>
                 <input id="name-input" type="text" name="Name" placeholder="John Doe"
                   class="text-sm text-text-muted px-4 py-3 outline-0 border border-border w-full rounded-2xl">
                 <span id="invalid-name" class="text-[12px] text-red-400 opacity-0">Please enter your full name</span>
               </div>
               <div class="flex flex-col gap-1">
-                <label for="email-input" class="font-medium text-text w-fit">Email Address</label>
+                <label for="email-input" class="font-medium text-sm text-text w-fit">Email Address</label>
                 <input id="email-input" type="email" name="Email" placeholder="john.doe@example.com"
                   class="text-sm text-text-muted px-4 py-3 outline-0 border border-border w-full rounded-2xl">
                 <span id="invalid-email" class="text-[12px] text-red-400 opacity-0">Please enter a valid email</span>
               </div>
             </div>
             <div>
-              <div class="flex flex-col gap-1 mt-5">
-                <label for="message-input" class="font-medium text-text w-fit">Message</label>
+              <div class="flex flex-col gap-1 mt-2">
+                <label for="message-input" class="font-medium text-sm text-text w-fit">Message</label>
                 <textarea id="message-input" name="Message" placeholder="Your message here..."
                   class="text-sm text-text-muted px-4 py-2 h-50 outline-0 border border-border w-full rounded-2xl resize-none"></textarea>
                 <span id="invalid-message" class="text-[12px] text-red-400 opacity-0">Please write a real message</span>
               </div>
               <button id="submit-btn" type="submit"
-                class="mt-5 bg-accent hover:bg-accent-hover duration-200 text-white font-bold px-5 py-3 rounded-2xl w-full cursor-pointer shadow-lg shadow-accent/25">Send
+                class="mt-5 bg-accent hover:bg-accent-hover  text-white font-bold px-5 py-3 rounded-2xl w-full cursor-pointer shadow-lg shadow-accent/25">Send
                 Message</button>
             </div>
           </form>
@@ -578,7 +609,7 @@
               <span class="font-semibold text-lg text-text">Get in touch</span>
               <div class="flex flex-col">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdulrhmanomar613@gmail.com&su=طلب خدمة&body=أهلاً عبد الرحمن"
-                  target="_blank" class="group flex flex-row items-center gap-3">
+                  target="_blank" class="group flex flex-row items-center gap-3 w-fit">
                   <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -591,8 +622,7 @@
                 </a>
               </div>
               <div class="flex flex-col">
-                <div href="mailto:abdulrhmanomar613@gmail.com"
-                  class="group flex flex-row items-center gap-3 cursor-default">
+                <div class="group flex flex-row items-center gap-3 cursor-default w-fit">
                   <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

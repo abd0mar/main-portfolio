@@ -26,33 +26,6 @@ export class Projects {
         liveDemoLink: 'https://abd0mar.github.io/Dashboard_Project/',
         githubLink: 'https://github.com/abd0mar/Dashboard_Project.git',
       },
-      {
-        name: 'Dashboard Website',
-        description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
-        technologies: ['HTML', 'CSS', 'Vanilla JS'],
-        imageOne: dashboardDark,
-        imageTwo: dashboardLight,
-        liveDemoLink: 'https://abd0mar.github.io/Dashboard_Project/',
-        githubLink: 'https://github.com/abd0mar/Dashboard_Project.git',
-      },
-      {
-        name: 'Dashboard Website',
-        description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
-        technologies: ['HTML', 'CSS', 'Vanilla JS'],
-        imageOne: dashboardDark,
-        imageTwo: dashboardLight,
-        liveDemoLink: 'https://abd0mar.github.io/Dashboard_Project/',
-        githubLink: 'https://github.com/abd0mar/Dashboard_Project.git',
-      },
-      {
-        name: 'Dashboard Website',
-        description: 'A full-featured online store with product catalog, shopping cart, and secure checkout. Built with modern design principles and optimized for conversions.',
-        technologies: ['HTML', 'CSS', 'Vanilla JS'],
-        imageOne: dashboardDark,
-        imageTwo: dashboardLight,
-        liveDemoLink: 'https://abd0mar.github.io/Dashboard_Project/',
-        githubLink: 'https://github.com/abd0mar/Dashboard_Project.git',
-      },
     ];
 
     this.init()

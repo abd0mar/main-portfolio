@@ -4,18 +4,26 @@ export class NavbarMovement {
   toggleBtn: HTMLButtonElement | null;
   openIcon: SVGElement | null;
   closeIcon: SVGElement | null;
+  isInitialized: boolean;
   constructor() {
     this.nav = document.querySelector("nav") as HTMLElement;
     this.menu = document.querySelector("#nav-menu") as HTMLDivElement;
     this.toggleBtn = document.querySelector("#nav-toggle") as HTMLButtonElement;
     this.openIcon = document.querySelector("#open-menu") as SVGElement;
     this.closeIcon = document.querySelector("#close-menu") as SVGElement;
+
+    this.isInitialized = false;
     this.init()
   }
 
   init() {
-    this.toggleMenu()
-    this.navAction()
+    if (this.nav && this.menu && this.toggleBtn && this.openIcon && this.closeIcon) {
+      if (this.isInitialized) return;
+      this.isInitialized = true;
+
+      this.toggleMenu()
+      this.navAction()
+    }
   }
 
   navAction() {
@@ -32,7 +40,6 @@ export class NavbarMovement {
 
   toggleMenu() {
     this.toggleBtn?.addEventListener("click", () => {
-      console.log("fine")
       if (this.menu?.classList.contains("max-h-0")) {
         this.menu?.classList.replace("opacity-0", "opacity-100")
         this.menu?.classList.replace("max-h-0", "max-h-300")
@@ -63,7 +70,7 @@ export class ThemeBtn {
   init() {
     const currTheme = localStorage.getItem("theme");
     this.updateIcons(currTheme || "light");
-    this.changeTheme()
+    if (this.btn && this.moonIcon && this.sunIcon) this.changeTheme()
   }
 
   changeTheme() {

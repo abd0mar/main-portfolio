@@ -4,6 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Abdulrhman Omar, a frontend web developer based in Cairo, Egypt. Specializing in modern, responsive websites for small businesses.">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Abdulrhman Omar | Frontend Web Developer">
+  <meta property="og:description"
+    content="Portfolio of Abdulrhman Omar, a frontend web developer based in Cairo, Egypt.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://abdulrhman-self.vercel.app/src/assets/images/main.webp">
+  <meta property="og:url" content="https://abdulrhman-self.vercel.app/">
   <!-- Css -->
   <link rel="stylesheet" href="src/style/style.css">
   <link rel="icon" type="image/svg+xml" href="src/assets/main-icon.svg" />
@@ -13,8 +23,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
-  <title>Abdulrhman</title>
-
+  <title>Abdulrhman Omar | Frontend Web Developer</title>
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- Dark Theme -->
   <script>
@@ -23,16 +32,16 @@
       document.documentElement.dataset.theme = currTheme;
     })();
   </script>
-
 </head>
 
 <body class="bg-bg-primary transition-colors ">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Start Navbar -->
-  <nav class="fixed z-50 w-full top-0 flex py-5 border-b border-transparent bg-bg-primary">
+  <nav class="fixed z-50 w-full top-0 flex py-5 border-b border-transparent bg-bg-primary" aria-label="Main navigation">
     <!-- <div class="absolute w-full h-full top-0 bg-bg-primary/95 backdrop-blur-lg"></div> -->
     <div class="relative w-full">
       <div id="nav-container"
-        class="relative max-w-6xl flex justify-between z-1 items-center top-0 mx-auto px-10 xl:px-0">
+        class="relative max-w-6xl flex justify-between z-1 items-center top-0 mx-auto px-5 xl:px-0">
         <a href="#hero-section" class="flex flex-1 gap-3 items-center">
           <div
             class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover  cursor-pointer">
@@ -56,16 +65,17 @@
           </ul>
         </div>
         <div class="flex flex-1 gap-3 items-center justify-end">
-          <button id="theme-btn" type="button"
+          <button id="theme-btn" type="button" aria-expanded="false" aria-controls="nav-menu" aria-pressed="false"
+            aria-label="Toggle dark mode"
             class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer">
-            <svg id="moon-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            <svg id="moon-icon" aria-hidden="true" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17"
+              height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon">
               <path
                 d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
             </svg>
-            <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            <svg id="sun-icon" aria-hidden="true" class="hidden" xmlns="http://www.w3.org/2000/svg" width="17"
+              height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2" />
@@ -78,7 +88,7 @@
               <path d="m19.07 4.93-1.41 1.41" />
             </svg>
           </button>
-          <button type="button"
+          <button type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu"
             class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer lg:hidden"
             id="nav-toggle">
             <svg id="open-menu" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -100,15 +110,15 @@
               Hire Me</span></a>
         </div>
       </div>
-      <div
+      <div role="navigation" aria-label="Mobile navigation menu" aria-expanded="false" aria-hidden="true"
         class="absolute flex flex-col lg:hidden justify-center opacity-0 max-h-0 top-12.25 left-0 w-full p-5 gap-1 px-10 bg-bg-primary border-b border-border"
         id="nav-menu">
         <!-- <div class="absolute w-full h-full top-0 z-0 bg-bg-primary/95 backdrop-blur-lg"></div> -->
-        <a class="flex w-full nav-links" href="#about-section">About</a>
-        <a class="flex w-full nav-links" href="#skills-section">Skills</a>
-        <a class="flex w-full nav-links" href="#projects-section">Projects</a>
-        <a class="flex w-full nav-links" href="#services-section">Services</a>
-        <a class="flex w-full nav-links" href="#contact-section">Contact</a>
+        <a class="flex w-full nav-links" href="#about-section" role="menuitem">About</a>
+        <a class="flex w-full nav-links" href="#skills-section" role="menuitem">Skills</a>
+        <a class="flex w-full nav-links" href="#projects-section" role="menuitem">Projects</a>
+        <a class="flex w-full nav-links" href="#services-section" role="menuitem">Services</a>
+        <a class="flex w-full nav-links" href="#contact-section" role="menuitem">Contact</a>
         <a href="#contact-section"
           class="block bg-accent text-white px-5 py-2.5 text-center rounded-[15px] font-bold text-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover cursor-pointer lg:hidden"><span>
             Hire Me</span></a>
@@ -116,9 +126,9 @@
     </div>
   </nav>
   <!-- End Navbar -->
-  <main>
+  <main id="main-content" role="main" aria-label="Main content">
     <!-- Start Hero section -->
-    <section id="hero-section" class="relative section-style bg-bg-primary min-h-screen">
+    <section id="hero-section" class="relative section-style bg-bg-primary min-h-screen" aria-labelledby="hero-heading">
       <div
         class="section-container text-center lg:text-start flex flex-col-reverse justify-center lg:flex-row py-20 px-0 pt-[30] items-center">
         <div class="flex flex-col gap-5 items-center lg:items-start">
@@ -171,7 +181,8 @@
             <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] top-10 left-10"></div>
             <div class="rounded-3xl z-1 overflow-hidden w-72 md:w-80 lg:w-96">
               <img fetchpriority="high" loading="lazy" width="1195" height="896" class="w-72 md:w-80 lg:w-96 h-auto"
-                src="src/assets/images/main.webp" alt="">
+                src="src/assets/images/main.webp"
+                alt="Portrait of Abdulrhman Omar, a frontend web developer in Cairo, Egypt">
             </div>
             <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] bottom-10 right-10"></div>
             <div
@@ -410,15 +421,13 @@
         </div>
         <div id="projects-container" class="grid lg:grid-cols-3 gap-5 mb-12.5 lg:mb-0"></div>
       </div>
-      <div id="show-more-btn"
+      <button id="show-more-btn" type="button"
         class="absolute bottom-15 z-20 bg-accent flex gap-2 items-center text-white px-5 mx-auto py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-          viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-          <path
-            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z" />
-        </svg>
-        Show More
-      </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"
+          aria-hidden="true">...</svg>
+        <span aria-hidden="false">Show More</span>
+        <span class="sr-only">Show more projects</span>
+      </button>
     </section>
     <!-- End projects section -->
     <!-- Start services section -->
@@ -579,8 +588,8 @@
             class="flex flex-col p-10 border border-border bg-bg-primary rounded-2xl">
             <div class="grid grid-cols-2 gap-7">
               <div class="flex flex-col gap-1">
-                <label for="name-input" class="font-medium text-sm text-text w-fit">Full Name</label>
-                <input id="name-input" type="text" name="Name" placeholder="John Doe"
+                <label for="name-input" class="font-medium text-sm text-text">Full Name</label>
+                <input id="name-input" type="text" name="Name" placeholder="John Doe" aria-required="true"
                   class="text-sm text-text-muted px-4 py-3 outline-0 border border-border w-full rounded-2xl">
                 <span id="invalid-name" class="text-[12px] text-red-400 opacity-0">Please enter your full name</span>
               </div>
@@ -642,7 +651,8 @@
               <div class="flex flex-col gap-4">
                 <a href="https://github.com/abd0mar" target="_blank" rel="noopener noreferrer">
                   <div
-                    class="bg-bg-primary p-4 flex flex-row gap-4 rounded-2xl text-start items-center border border-border hover:border-accent/30 group hover:bg-primary-hover">
+                    class="bg-bg-primary p-4 flex flex-row gap-4 rounded-2xl text-start items-center border border-border hover:border-accent/30 group hover:bg-primary-hover"
+                    aria-label="Visit my GitHub profile">
                     <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

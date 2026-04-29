@@ -13,7 +13,7 @@ export class NavbarMovement {
     this.closeIcon = document.querySelector("#close-menu") as SVGElement;
 
     this.isInitialized = false;
-    this.init()
+    this.init();
   }
 
   init() {
@@ -21,19 +21,19 @@ export class NavbarMovement {
       if (this.isInitialized) return;
       this.isInitialized = true;
 
-      this.toggleMenu()
-      this.navAction()
+      this.toggleMenu();
+      this.navAction();
     }
   }
 
   navAction() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        this.nav?.classList.replace("border-transparent", "border-border")
-        this.nav?.classList.replace("py-5", "py-3")
+        this.nav?.classList.replace("border-transparent", "border-border");
+        this.nav?.classList.replace("py-5", "py-3");
       } else {
-        this.nav?.classList.replace("border-border", "border-transparent")
-        this.nav?.classList.replace("py-3", "py-5")
+        this.nav?.classList.replace("border-border", "border-transparent");
+        this.nav?.classList.replace("py-3", "py-5");
       }
     })
   }
@@ -41,15 +41,23 @@ export class NavbarMovement {
   toggleMenu() {
     this.toggleBtn?.addEventListener("click", () => {
       if (this.menu?.classList.contains("max-h-0")) {
-        this.menu?.classList.replace("opacity-0", "opacity-100")
-        this.menu?.classList.replace("max-h-0", "max-h-300")
-        this.openIcon?.classList.add("hidden")
-        this.closeIcon?.classList.remove("hidden")
+        this.menu?.setAttribute("aria-hidden", "false");
+        this.menu?.setAttribute("aria-expanded", "true");
+
+        this.menu?.classList.replace("opacity-0", "opacity-100");
+        this.menu?.classList.replace("max-h-0", "max-h-300");
+        this.openIcon?.classList.add("hidden");
+        this.closeIcon?.classList.remove("hidden");
       } else {
-        this.menu?.classList.replace("opacity-100", "opacity-0")
-        this.menu?.classList.replace("max-h-300", "max-h-0")
-        this.closeIcon?.classList.add("hidden")
-        this.openIcon?.classList.remove("hidden")
+        this.menu?.classList.replace("opacity-100", "opacity-0");
+        this.menu?.classList.replace("max-h-300", "max-h-0");
+        this.closeIcon?.classList.add("hidden");
+        this.openIcon?.classList.remove("hidden");
+
+        setTimeout(() => {
+          this.menu?.setAttribute("aria-hidden", "true");
+          this.menu?.setAttribute("aria-expanded", "false");
+        }, 300)
       }
     })
   }
@@ -70,16 +78,16 @@ export class ThemeBtn {
   init() {
     const currTheme = localStorage.getItem("theme");
     this.updateIcons(currTheme || "light");
-    if (this.btn && this.moonIcon && this.sunIcon) this.changeTheme()
+    if (this.btn && this.moonIcon && this.sunIcon) this.changeTheme();
   }
 
   changeTheme() {
     this.btn?.addEventListener("click", () => {
-      const currentTheme = document.documentElement.dataset.theme
+      const currentTheme = document.documentElement.dataset.theme;
       const newTheme = currentTheme === "light" ? "dark" : "light";
       this.updateIcons(newTheme);
       document.documentElement.dataset.theme = newTheme;
-      localStorage.setItem("theme", newTheme)
+      localStorage.setItem("theme", newTheme);
     })
   }
 

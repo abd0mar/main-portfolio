@@ -21,12 +21,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;400;600;700;800;900&display=swap&font-display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
   <title>Abdulrhman Omar | Frontend Web Developer</title>
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- Dark Theme -->
-  <script>
+  <script defer>
     (function () {
       const currTheme = localStorage.getItem("theme") || "light";
       document.documentElement.dataset.theme = currTheme;
@@ -45,8 +45,8 @@
         <a href="#hero-section" class="flex flex-1 gap-3 items-center">
           <div
             class="p-2 bg-accent text-white rounded-[15px] shadow-lg shadow-accent/25 hover:bg-accent-hover  cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="lucide lucide-code-xml-icon lucide-code-xml">
               <path d="m18 16 4-4-4-4" />
               <path d="m6 8-4 4 4 4" />
@@ -91,16 +91,16 @@
           <button type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu"
             class="relative py-2.5 px-3 rounded-2xl text-text hover:bg-primary-hover hover:text-accent  cursor-pointer lg:hidden"
             id="nav-toggle">
-            <svg id="open-menu" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-menu-icon lucide-menu">
+            <svg id="open-menu" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
               <path d="M4 5h16" />
               <path d="M4 12h16" />
               <path d="M4 19h16" />
             </svg>
-            <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-x-icon lucide-x hidden">
+            <svg id="close-menu" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-x-icon lucide-x hidden">
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
             </svg>
@@ -110,7 +110,7 @@
               Hire Me</span></a>
         </div>
       </div>
-      <div role="navigation" aria-label="Mobile navigation menu" aria-expanded="false" aria-hidden="true"
+      <div role="navigation" aria-label="Mobile navigation menu" aria-expanded="false"
         class="absolute flex flex-col lg:hidden justify-center opacity-0 max-h-0 top-12.25 left-0 w-full p-5 gap-1 px-10 bg-bg-primary border-b border-border"
         id="nav-menu">
         <!-- <div class="absolute w-full h-full top-0 z-0 bg-bg-primary/95 backdrop-blur-lg"></div> -->
@@ -164,8 +164,8 @@
             </a>
             <a
               class="flex items-center px-3 py-2.5 cursor-pointer font-semibold text-[16px] bg-bg-primary text-text border border-border hover:bg-primary-hover   gap-2 rounded-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line">
                 <path d="M12 17V3" />
                 <path d="m6 11 6 6 6-6" />
@@ -180,7 +180,7 @@
           <div class="flex relative p-4 border border-accent/20 rounded-3xl justify-center items-center">
             <div class="w-30 h-30 absolute bg-accent rounded-[50%] blur-[80px] top-10 left-10"></div>
             <div class="rounded-3xl z-1 overflow-hidden w-72 md:w-80 lg:w-96">
-              <img fetchpriority="high" loading="lazy" width="1195" height="896" class="w-72 md:w-80 lg:w-96 h-auto"
+              <img fetchpriority="high" width="288" height="216" class="w-72 md:w-80 lg:w-96 h-auto"
                 src="src/assets/images/main.webp"
                 alt="Portrait of Abdulrhman Omar, a frontend web developer in Cairo, Egypt">
             </div>
@@ -199,8 +199,8 @@
       <a href="#about-section"
         class="absolute flex flex-col items-center bottom-0 lg:bottom-8 gap-1 animate-bounce text-text-muted text-[12px]">
         <span>Scroll</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           class="lucide lucide-arrow-down-icon lucide-arrow-down">
           <path d="M12 5v14" />
           <path d="m19 12-7 7-7-7" />
@@ -219,8 +219,8 @@
           <div class="grid grid-cols-2 gap-5">
             <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
               <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-map-pin-icon lucide-map-pin">
                   <path
                     d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
@@ -234,8 +234,8 @@
             </div>
             <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
               <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-briefcase w-5 h-5 text-primary" aria-hidden="true">
                   <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                   <rect width="20" height="14" x="2" y="6" rx="2"></rect>
@@ -248,8 +248,8 @@
             </div>
             <div class="bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30">
               <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-graduation-cap w-5 h-5 text-primary" aria-hidden="true">
                   <path
                     d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
@@ -295,17 +295,13 @@
               project.</p>
           </div>
           <div class="flex flex-wrap gap-5">
-            <span
-              class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Clean
+            <span class="px-4 py-2  text-accent border border-accent/10 font-medium text-sm rounded-2xl">Clean
               Code</span>
-            <span
-              class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Responsive
+            <span class="px-4 py-2  text-accent border border-accent/10 font-medium text-sm rounded-2xl">Responsive
               Design</span>
-            <span
-              class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Modern
+            <span class="px-4 py-2  text-accent border border-accent/10 font-medium text-sm rounded-2xl">Modern
               UI/UX</span>
-            <span
-              class="px-4 py-2 bg-accent/10 text-accent border border-accent/10 font-medium text-sm rounded-2xl">Fast
+            <span class="px-4 py-2  text-accent border border-accent/10 font-medium text-sm rounded-2xl">Fast
               Delivery</span>
           </div>
         </div>
@@ -324,7 +320,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5">
           <div class="group skill-box">
             <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="currentColor"
                   d="M128 96L162.9 491.8L319.5 544L477.1 491.8L512 96L128 96zM436.2 223.9L252.4 223.9L256.5 273.3L432.1 273.3L418.5 421.7L320.6 448.7L320.6 449L319.5 449L220.8 421.7L214.8 345.9L262.5 345.9L266 384L319.5 398.5L373.2 384L379.2 321.8L212.3 321.8L199.5 176.2L440.6 176.2L436.2 223.9z" />
@@ -334,7 +330,7 @@
           </div>
           <div class="group skill-box">
             <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="currentColor"
                   d="M128 96L162.9 491.8L319.5 544L477.1 491.8L512 96L128 96zM436.2 223.9L252.4 223.9L256.5 273.3L432.1 273.3L418.5 421.7L320.6 448.7L320.6 449L319.5 449L220.8 421.7L214.8 345.9L262.5 345.9L266 384L319.5 398.5L373.2 384L379.2 321.8L212.3 321.8L199.5 176.2L440.6 176.2L436.2 223.9z" />
@@ -344,7 +340,7 @@
           </div>
           <div class="group skill-box">
             <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="currentColor"
                   d="M96 96L96 544L544 544L544 96L96 96zM339.8 445.4C339.8 489 314.2 508.9 276.9 508.9C243.2 508.9 223.7 491.5 213.7 470.4L248 449.7C254.6 461.4 260.6 471.3 275.1 471.3C288.9 471.3 297.7 465.9 297.7 444.8L297.7 301.7L339.8 301.7L339.8 445.4zM439.4 508.9C400.3 508.9 375 490.3 362.7 465.9L397 446.1C406 460.8 417.8 471.7 438.5 471.7C455.9 471.7 467.1 463 467.1 450.9C467.1 436.5 455.7 431.4 436.4 422.9L425.9 418.4C395.5 405.5 375.4 389.2 375.4 354.9C375.4 323.3 399.5 299.3 437 299.3C463.8 299.3 483 308.6 496.8 333L464 354C456.8 341.1 449 336 436.9 336C424.6 336 416.8 343.8 416.8 354C416.8 366.6 424.6 371.7 442.7 379.6L453.2 384.1C489 399.4 509.1 415.1 509.1 450.3C509.1 488.1 479.3 508.9 439.4 508.9z" />
@@ -374,7 +370,7 @@
           </div>
           <div class="group skill-box">
             <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="currentColor"
                   d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z" />
@@ -423,8 +419,8 @@
       </div>
       <button id="show-more-btn" type="button"
         class="absolute bottom-15 z-20 bg-accent flex gap-2 items-center text-white px-5 mx-auto py-2 shadow-lg shadow-accent/25 rounded-2xl hover:bg-accent-hover cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"
-          aria-hidden="true">...</svg>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          viewBox="0 0 576 512" aria-hidden="true">...</svg>
         <span aria-hidden="false">Show More</span>
         <span class="sr-only">Show more projects</span>
       </button>
@@ -442,8 +438,8 @@
         <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
             <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-rocket-icon lucide-rocket text-accent">
                   <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
                   <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
@@ -457,13 +453,14 @@
                 Perfect for product launches, campaigns, and lead generation.</span>
             </div>
             <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
-                </svg>Fast Loading</div>
+                </svg>Fast Loading
+              </div>
               <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -482,8 +479,8 @@
           </div>
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
             <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-globe-icon lucide-globe text-accent">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
@@ -496,21 +493,22 @@
                 your business grow. Complete with all essential pages.</span>
             </div>
             <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
-                </svg>Custom Design</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
+                </svg>Custom Design
+              </div>
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>Contact Forms</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
@@ -521,8 +519,8 @@
           </div>
           <div class="group p-8 border-border hover:border-accent/30 gap-6 border rounded-2xl flex flex-col">
             <div class="flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 ">
-              <div><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard text-accent">
                   <rect width="7" height="9" x="3" y="3" rx="1" />
                   <rect width="7" height="5" x="14" y="3" rx="1" />
@@ -536,35 +534,38 @@
                 layouts, and clean user interfaces for efficient data management.</span>
             </div>
             <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
-                </svg>Data Visualization</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                </svg>Data Visualization
+              </div>
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
-                </svg>Responsive Layout</div>
-              <div class="flex flex-row items-center gap-2 text-text-muted text-sm"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                </svg>Responsive Layout
+              </div>
+              <div class="flex flex-row items-center gap-2 text-text-muted text-sm">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
-                </svg>Clean UI</div>
+                </svg>Clean UI
+              </div>
             </div>
           </div>
         </div>
         <div class="mt-10 flex items-center justify-center gap-2">
           <span class="text-text-muted text-md">Have a different project in mind?</span>
-          <a href="#contact-section" class="group text-accent flex gap-1 items-center">Get in touch <svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          <a href="#contact-section" class="group text-accent flex gap-1 items-center">Get in touch
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="lucide lucide-arrow-right-icon lucide-arrow-right text-accent group-hover:animate-pulse">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -620,9 +621,9 @@
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdulrhmanomar613@gmail.com&su" target="_blank"
                   class="group flex flex-row items-center gap-3 w-fit">
                   <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-mail-icon lucide-mail">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
                       <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                       <rect x="2" y="4" width="20" height="16" rx="2" />
                     </svg>
@@ -633,9 +634,9 @@
               <div class="flex flex-col">
                 <div class="group flex flex-row items-center gap-3 cursor-default w-fit">
                   <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-map-pin-icon lucide-map-pin">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin">
                       <path
                         d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
                       <circle cx="12" cy="10" r="3" />
@@ -654,9 +655,9 @@
                     class="bg-bg-primary p-4 flex flex-row gap-4 rounded-2xl text-start items-center border border-border hover:border-accent/30 group hover:bg-primary-hover"
                     aria-label="Visit my GitHub profile">
                     <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-github w-5 h-5 text-primary" aria-hidden="true">
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-github w-5 h-5 text-primary" aria-hidden="true">
                         <path
                           d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
                         </path>
@@ -667,22 +668,24 @@
                       <span class="text-text font-semibold text-[16px]">GitHub</span>
                       <span id="github-username" class="text-text-muted text-sm">@abd0mar</span>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round"
                       class="lucide lucide-arrow-up-right w-5 h-5 text-text-muted group-hover:text-accent transition-colors ml-auto"
                       aria-hidden="true">
                       <path d="M7 7h10v10"></path>
                       <path d="M7 17 17 7"></path>
                     </svg>
+                    <span class="sr-only">Visit Abdulrhman Omar's GitHub profile</span>
                   </div>
                 </a>
                 <a href="https://linkedin.com/in/abdulrhman-omar-97a1a63a8" target="_blank" rel="noopener noreferrer">
                   <div
                     class="bg-bg-primary p-4 flex flex-row gap-4 rounded-2xl text-start items-center border border-border hover:border-accent/30 group hover:bg-primary-hover">
                     <div class="p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-linkedin" aria-hidden="true">
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-linkedin">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect width="4" height="12" x="2" y="9"></rect>
                         <circle cx="4" cy="4" r="2"></circle>

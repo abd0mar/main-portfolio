@@ -9,3 +9,12 @@ new ThemeBtn();
 new NavbarMovement();
 new Projects();
 new InputValidation();
+
+const sections = document.querySelectorAll<HTMLElement>("section");
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach(section => { if (section.isIntersecting) section.target.classList.add("show") })
+})
+
+sections.forEach(e => {
+  observer.observe(e);
+})

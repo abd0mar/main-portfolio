@@ -10,6 +10,7 @@
   --color-border: oklch(92.876% 0.01272 255.643);
   --color-text: oklch(17.21% 0.03239 268.888);
   --color-text-muted: oklch(55.1% 0.027 264.364);
+  --duration: 0.3s;
 }
 
 :root[data-theme="dark"] {
@@ -40,11 +41,12 @@ html {
   box-sizing: inherit;
 }
 
-* {
-  transition-property: all;
-  transition-duration: 0.2s;
+
+/* h1,h2,h3,p, {
+  transition-property: color, background;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
-}
+} */
 
 img.main-logo {
   filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(5038%) hue-rotate(204deg) brightness(105%) contrast(105%);
@@ -54,12 +56,13 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-display: swap;
+  overflow-x: hidden;
 }
 
 a {
   -webkit-tap-highlight-color: transparent;
+  margin: 0;
 }
-
 nav {
   transition-property: all;
 }
@@ -118,43 +121,60 @@ sr-only {
 }
 
 .nav-links {
-  @apply text-[15px] font-semibold text-text-muted py-2.5 px-3 rounded-2xl hover:text-accent-hover hover:bg-primary-hover;
+  @apply text-[15px] font-semibold text-text-muted py-2.5 px-3 rounded-2xl hover:text-accent-hover hover:bg-primary-hover duration-(--duration);
 }
 
 .section-style {
   @apply flex w-full items-center justify-center px-5 xl:px-0 py-25 lg:py-32;
+  transition: 0.3s
 }
 
 .section-container {
-  @apply max-w-6xl gap-12 justify-start mx-auto;
+  @apply max-w-6xl gap-12 justify-start mx-auto duration-(--duration);
 }
 
 .section-name {
-  @apply text-accent font-semibold text-sm uppercase;
+  @apply text-accent font-semibold text-sm uppercase duration-(--duration);
 }
 
 .section-header {
-  @apply text-text text-4xl lg:text-5xl font-bold leading-tight;
+  @apply text-text text-4xl lg:text-5xl font-bold leading-tight duration-(--duration);
 }
 
 .section-head-container {
-  @apply flex flex-col gap-2;
+  @apply flex flex-col gap-2 duration-(--duration);
 }
 
 .section-description {
-  @apply text-text-muted text-lg;
+  @apply text-text-muted text-lg duration-(--duration);
 }
 
+
+
+/* ============================ */
+/* About Section */
+/* ============================ */
+
+.info-box{
+  @apply relative group-[.show]:opacity-100 group-[.show]:top-0 opacity-0 top-20 duration-1000;
+}
+.info-box-wrapper{
+  @apply bg-bg-primary flex flex-col p-5 gap-3 rounded-2xl border border-border hover:border-accent/30 duration-(--duration);
+}
 
 /* ============================ */
 /* Skills Section */
 /* ============================ */
 .skill-box {
-  @apply flex flex-col p-6 items-center justify-center gap-1 bg-bg-primary border border-border hover:border-accent/30 hover:shadow-md hover:shadow-accent/20 rounded-2xl;
+  @apply relative group-[.show]/section:opacity-100 group-[.show]/section:top-0 duration-500 opacity-0 top-3;
+}
+
+.skill-wrapper {
+  @apply flex flex-col p-6 items-center justify-center bg-bg-primary border border-border hover:border-accent/30 hover:shadow-md hover:shadow-accent/20 rounded-2xl duration-(--duration);
 }
 
 .skill-icon {
-  @apply group-hover:text-accent text-text-muted;
+  @apply group-hover/box:text-accent text-text-muted duration-(--duration);
 }
 
 .familiar-skilles-box {
@@ -165,7 +185,7 @@ sr-only {
 /* Projects Section */
 /* ============================ */
 .project-card {
-  @apply relative bg-bg-primary rounded-2xl border border-border overflow-hidden hover:shadow-[0px_0px_20px_2px_oklch(0_0_0/0.071)] hover:border-accent/30;
+  @apply relative bg-bg-primary rounded-2xl border border-border overflow-hidden hover:shadow-[0px_0px_20px_2px_oklch(0_0_0/0.071)] hover:border-accent/30 duration-(--duration);
 }
 
 .project-card-info {
@@ -177,11 +197,11 @@ sr-only {
 }
 
 .project-card__tech {
-  @apply bg-accent/10 rounded-2xl px-2 py-1 text-[12px] text-accent font-medium border border-border;
+  @apply bg-accent/10 rounded-2xl px-2 py-1 text-[12px] text-accent font-medium border border-border duration-(--duration);
 }
 
 .project-name {
-  @apply font-semibold text-lg text-text;
+  @apply font-semibold text-lg text-text duration-(--duration);
 }
 
 .project-description {
@@ -198,4 +218,33 @@ sr-only {
 
 .github-btn {
   @apply p-3 border border-border rounded-2xl text-text hover:bg-primary-hover hover:border-accent/30;
+}
+
+
+/* ============================ */
+/* Sevices Section */
+/* ============================ */
+
+.services-box-wrapper {
+  @apply h-full w-full rounded-2xl p-8 border-border hover:border-accent/30 gap-6 border flex flex-col duration-(--duration)
+}
+
+.services-box-logo {
+  @apply flex w-14 h-14 rounded-2xl bg-accent/10 justify-center items-center group-hover:bg-accent/20 duration-(--duration);
+}
+
+.services-box-animation{
+  @apply relative top-15 opacity-0 group-[.show]/section:opacity-100 group-[.show]/section:top-0 duration-(--duration);
+}
+
+
+/* ============================ */
+/* Contact Section */
+/* ============================ */
+
+.contact-links-wrapper{
+  @apply bg-bg-primary p-4 flex flex-row gap-4 rounded-2xl text-start items-center border border-border hover:border-accent/30 hover:bg-primary-hover duration-(--duration);
+}
+.contact-links-logo{
+  @apply p-2.5 bg-accent/10 text-accent w-fit rounded-2xl group-hover:bg-accent/20 duration-(--duration);
 }
